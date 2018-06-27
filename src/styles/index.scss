@@ -1,0 +1,31 @@
+$pink: #F81B84;
+$green: #A4D555;
+$blue: #04c4ff;
+
+body {
+    background-color: $green;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-button-container {
+    text-align: center;
+    margin: 30px;
+  
+  .main-button {
+    background-color: $blue;
+    border-color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 4px rgb(136, 134, 128);
+    outline: none;
+  }
+}
+
+.activity-container {
+    font-size: 40px;
+    text-align: center;
+    margin: 30px;
+}

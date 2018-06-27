@@ -1,0 +1,28 @@
+body {
+  background-color: #A4D555;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-button-container {
+  text-align: center;
+  margin: 30px;
+}
+.main-button-container .main-button {
+  background-color: #04c4ff;
+  border-color: black;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 4px #888680;
+  outline: none;
+}
+
+.activity-container {
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+
+/*# sourceMappingURL=index.css.map */
