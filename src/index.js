@@ -59,21 +59,29 @@ class ActivityGenerator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activityNumber: null
+      activityNumber: Math.floor(Math.random()*activities.length)
     };
   }
 
   render() {
     return (
       <div>
-        <div className="main-button-container">
-          <button className="main-button" onClick={() => this.setActivityNumber()}>
-            WTF Should I do?
-          </button>
+        <div className="main-page-heading">
+          WTF Should I do?
         </div>
         <div className="activity-container">
           {this.renderActivity()}
         </div>
+        <div className="button-container">
+          <button className="accept-button">
+            Ok, I'll give it a go
+          </button>
+          <button className="reject-button" onClick={() => this.setActivityNumber()}>
+            Give me another suggestion
+          </button>
+
+        </div>
+
       </div>
     );
   }
