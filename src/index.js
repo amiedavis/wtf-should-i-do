@@ -88,6 +88,8 @@ class ActivityGenerator extends React.Component {
 
   setActivityNumber() {
     let randomNumber = Math.floor(Math.random()*activities.length);
+    randomNumber = (randomNumber === this.state.activityNumber) ? randomNumber + 1 : randomNumber;
+    
     this.setState({
       activityNumber: randomNumber
     });
