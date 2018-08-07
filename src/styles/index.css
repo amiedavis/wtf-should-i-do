@@ -1,40 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Neucha");
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.main-page-heading {
+.activity-generator-view-container .activity-generator-view-heading {
+  padding-top: 30px;
+}
+.activity-generator-view-container .activity-generator-view-heading h1 {
+  font-family: "Neucha", serif;
   text-align: center;
+  font-size: 50px;
+  color: #F44336;
+  font-style: italic;
 }
-
-.button-container {
+.activity-generator-view-container .button-container {
   text-align: center;
   margin: 30px;
+  padding-top: 30px;
 }
-.button-container .accept-button, .button-container .reject-button {
-  background-color: #04c4ff;
-  border-color: black;
-  font-size: 20px;
-  border-radius: 5px;
-  box-shadow: 2px 4px #888680;
-  outline: none;
-  cursor: pointer;
+.activity-generator-view-container .button-container .button {
+  font-weight: normal;
 }
-.button-container .accept-button:active {
-  box-shadow: 1px 2px #3b3a38;
-  background-color: #069fce;
-  transform: translateY(2px);
-}
-.button-container .accept-button:hover {
-  background-color: #069fce;
-}
-
-.activity-container {
+.activity-generator-view-container .activity-container {
   font-size: 40px;
   text-align: center;
   margin: 30px;
+}
+.activity-generator-view-container .activity-container .activity {
+  line-height: normal;
+}
+
+.main-menu {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
