@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'semantic-ui-react'
+
 import activities from './activities.json';
 
 class ActivityGeneratorView extends React.Component {
@@ -13,17 +15,20 @@ class ActivityGeneratorView extends React.Component {
   
     render() {
       return (
-        <div>
+        <div className="activity-generator-view-container">
+          <div className="activity-generator-view-heading">
+            <h1>WTF Should I Do?</h1>
+          </div>
           <div className="activity-container">
           <Activity value={this.state.activityNumber}/>
           </div>
           <div className="button-container">
-            <button className="accept-button">
+            <Button positive>
               Ok, I'll give it a go
-            </button>
-            <button className="reject-button" onClick={this.setActivityNumber}>
+            </Button>
+            <Button negative onClick={this.setActivityNumber}>
               Give me another suggestion
-            </button>
+            </Button>
   
           </div>
   

@@ -5,6 +5,10 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
+import { 
+  Menu, 
+  Container 
+} from 'semantic-ui-react'
 
 import './styles/index.css';
 import ActivityGeneratorView from './ActivityGeneratorView';
@@ -14,19 +18,28 @@ import ContactView from './ContactView';
 class Main extends React.Component {
   render() {
     return (
-        <div>
-          <h1>WTF Should I Do?</h1>
-          <ul className="header">
-            <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/rating">Rating</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-          </ul>
-          <div className="content">
-            <Route exact path="/" component={ActivityGeneratorView}/>
-            <Route path="/rating" component={RatingView}/>
-            <Route path="/contact" component={ContactView}/>
-          </div>
+      <div>
+        <div className="main-menu">
+          <Container>
+            <Menu fluid widths={3}>
+              <Menu.Item as={NavLink} to="/" name="home">
+                Home
+              </Menu.Item>
+              <Menu.Item as={NavLink} to="/rating" name="rating">
+                Rating
+              </Menu.Item>
+              <Menu.Item as={NavLink} to="/contact" name="contact">
+                Contact
+              </Menu.Item>
+            </Menu>
+          </Container>
         </div>
+        <div className="content">
+          <Route exact path="/" component={ActivityGeneratorView}/>
+          <Route path="/rating" component={RatingView}/>
+          <Route path="/contact" component={ContactView}/>
+        </div>
+      </div>
     );
   }
 }
