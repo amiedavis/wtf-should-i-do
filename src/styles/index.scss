@@ -36,6 +36,18 @@ body {
   }
 }
 
+.pre-rating-container {
+  text-align: center;
+  .label {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .rating-button-container {
+    margin-top: 25px;
+  }
+}
+
 .main-menu {
   margin: 10px;
 }

@@ -32,6 +32,18 @@ body {
   line-height: normal;
 }
 
+.pre-rating-container {
+  text-align: center;
+}
+.pre-rating-container .label {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.pre-rating-container .rating-button-container {
+  margin-top: 25px;
+}
+
 .main-menu {
   margin: 10px;
 }
