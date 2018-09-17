@@ -36,8 +36,8 @@ class Main extends React.Component {
         </div>
         <div className="content">
           <Route exact path="/" component={ActivityGeneratorView}/>
-          <Route path="/rating" component={RatingView}/>
-          <Route path="/contact" component={ContactView}/>
+          <Route exact path="/rating" component={RatingView}/>
+          <Route exact path="/contact" component={ContactView}/>
         </div>
       </div>
     );
