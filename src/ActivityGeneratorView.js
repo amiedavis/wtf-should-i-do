@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Button } from 'semantic-ui-react'
 import PreRatingComponent from "./PreRatingComponent.js";
 
@@ -13,12 +14,20 @@ class ActivityGeneratorView extends React.Component {
       };
       this.setActivityNumber = this.setActivityNumber.bind(this);
       this.setPreRatingDisplay = this.setPreRatingDisplay.bind(this);
+      this.preRatingRef = React.createRef();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+      if (this.state.displayPreRating !== prevState.displayPreRating && this.state.displayPreRating) {
+        const preRatingDomNode = ReactDOM.findDOMNode(this.preRatingRef.current);
+        preRatingDomNode.scrollIntoView();
+      }
     }
   
     render() {
-      let preRatingSection;
-      if (this.state.displayPreRating) {
-        preRatingSection = <PreRatingComponent />;
+      let preRatingConfig = {
+        ref: this.preRatingRef,
+        visible: this.state.displayPreRating
       }
 
       return (
@@ -38,7 +47,7 @@ class ActivityGeneratorView extends React.Component {
             </Button>
           </div>
           <div className="pre-rating-container">
-            {preRatingSection}
+            <PreRatingComponent {... preRatingConfig}/>
           </div>
         </div>
       );

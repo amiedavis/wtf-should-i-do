@@ -1,8 +1,16 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import ReactDOM from 'react-dom';
 
 class PreRatingComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
+        if (!this.props.visible) {
+            return null;
+        }
         return (
             <div>
                 <h1> Pre Rating </h1>
