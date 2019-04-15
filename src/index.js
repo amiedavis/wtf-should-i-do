@@ -1,24 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
-import { 
-  Menu, 
-  Container 
-} from 'semantic-ui-react'
 
 import './styles/index.css';
 import ActivityGeneratorView from './ActivityGeneratorView';
-import RatingView from './RatingView';
-import ContactView from './ContactView';
 
 class Main extends React.Component {
   render() {
     return (
       <div>
+        <ActivityGeneratorView/>
+      </div>
+      /* Leave this out for first cut
         <div className="main-menu">
           <Container>
             <Menu fluid widths={3}>
@@ -38,8 +30,7 @@ class Main extends React.Component {
           <Route exact path="/" component={ActivityGeneratorView}/>
           <Route exact path="/rating" component={RatingView}/>
           <Route exact path="/contact" component={ContactView}/>
-        </div>
-      </div>
+        </div> */
     );
   }
 }
@@ -47,8 +38,6 @@ class Main extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <HashRouter>
-  <Main />
-  </HashRouter>,
+  <Main />,
   document.getElementById('root')
 );

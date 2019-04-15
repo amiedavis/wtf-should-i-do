@@ -1,7 +1,5 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react'
-import PreRatingComponent from "./PreRatingComponent.js";
-
 import activities from './activities.json';
 
 class ActivityGeneratorView extends React.Component {
@@ -18,7 +16,9 @@ class ActivityGeneratorView extends React.Component {
     render() {
       let preRatingSection;
       if (this.state.displayPreRating) {
-        preRatingSection = <PreRatingComponent />;
+        // Leave out for first cut
+      //   preRatingSection = <PreRatingComponent />;
+        preRatingSection = <PositiveMessage/>
       }
 
       return (
@@ -66,6 +66,16 @@ class ActivityGeneratorView extends React.Component {
     return(
       <div className="activity">
         {activities[props.value].activity}
+      </div>
+    );
+  }
+
+  function PositiveMessage(){
+    const messages = ['You got this!', 'F yeah!', 'Awesome!', 'Go you!'];
+    const msgNo = Math.floor(Math.random()*4);
+    return (
+      <div className="positive-message">
+        {messages[msgNo]}
       </div>
     );
   }

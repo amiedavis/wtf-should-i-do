@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Neucha");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   display: flex;
@@ -30,6 +31,15 @@ body {
 }
 .activity-generator-view-container .activity-container .activity {
   line-height: normal;
+}
+
+.activity-generator-view-container .positive-message {
+  margin-top: 40px;
+  font-family: "Lobster", serif;
+  text-align: center;
+  font-size: 30px;
+  color: #0bbf35;
+  font-style: italic;
 }
 
 .pre-rating-container {
