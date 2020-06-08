@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import './styles/index.css';
-import ActivityGeneratorView from './ActivityGeneratorView';
+import "./styles/index.css";
+import ActivityGeneratorView from "./ActivityGeneratorView";
+import RatingView from "./RatingView";
+import AboutView from "./AboutView";
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import { Menu, Container } from "semantic-ui-react";
 
 class Main extends React.Component {
   render() {
     return (
       <div>
-        <ActivityGeneratorView/>
-      </div>
-      /* Leave this out for first cut
         <div className="main-menu">
           <Container>
             <Menu fluid widths={3}>
@@ -20,24 +21,25 @@ class Main extends React.Component {
               <Menu.Item as={NavLink} to="/rating" name="rating">
                 Rating
               </Menu.Item>
-              <Menu.Item as={NavLink} to="/contact" name="contact">
+              <Menu.Item as={NavLink} to="/about" name="about">
                 Contact
               </Menu.Item>
             </Menu>
           </Container>
         </div>
         <div className="content">
-          <Route exact path="/" component={ActivityGeneratorView}/>
-          <Route exact path="/rating" component={RatingView}/>
-          <Route exact path="/contact" component={ContactView}/>
-        </div> */
+          <Route exact path="/" component={ActivityGeneratorView} />
+          <Route exact path="/rating" component={RatingView} />
+          <Route exact path="/about" component={AboutView} />
+        </div>
+      </div>
     );
   }
 }
 
-// ========================================
-
 ReactDOM.render(
-  <Main />,
-  document.getElementById('root')
+  <HashRouter>
+    <Main />
+  </HashRouter>,
+  document.getElementById("root")
 );
